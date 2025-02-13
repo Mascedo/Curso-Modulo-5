@@ -97,7 +97,6 @@ function modaN(){
         moda = []
         freq = 0
         contagem = {}
-    
         lista.forEach(num => {
             contagem[num] = (contagem[num] || 0) + 1;
             if (contagem[num] > freq) {
