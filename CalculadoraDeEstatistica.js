@@ -91,6 +91,30 @@ function medianaN(){
     menu()
 }
 function modaN(){
-    let moda = 0
-    moda = 0
+        let contagem = {}
+        let freq = 0
+        let moda = []
+        moda = []
+        freq = 0
+        contagem = {}
+    
+        lista.forEach(num => {
+            contagem[num] = (contagem[num] || 0) + 1;
+            if (contagem[num] > freq) {
+                freq = contagem[num]
+            }
+        })
+    
+        for (let num in contagem) {
+            if (contagem[num] === freq) {
+                moda.push(Number(num))
+            }
+        }
+            if(lista.length !== 0){
+                console.log('a moda é:\n'+moda)
+                menu()
+        }else{
+            console.log('nenhuma lista adicionada!')
+            menu()
+        }
 }
