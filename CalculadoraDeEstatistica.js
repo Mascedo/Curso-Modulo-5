@@ -1,11 +1,7 @@
 const prompt = require('prompt-sync')();
 let opcao = 0
 let lista = []
-let quan = 0//é uma variavel geral porque tbm é usado na media
-let media = 0// usado na media
-let mediana = 0//usado na mediana
-let meio = 0 //usado na mediana
-let moda = 0
+let quan = 0//é uma variavel global porque tbm é usado na media
 menu()//inicia o codigo
 function menu(){
 console.log('menu de opções:')
@@ -60,6 +56,7 @@ function newnumber(){
 }
 
 function mediaN(){
+    let media = 0
     var soma = 0
     soma = 0//reseta o valor da soma
     media = 0//reste o valor da media
@@ -75,14 +72,14 @@ function mediaN(){
 }
 
 function medianaN(){
+    let mediana = 0//usado na mediana
+    let meio = 0 //usado na mediana
     mediana = 0
     lista.sort((a, b) => a - b)
     meio = Math.floor(quan / 2)//o array começa com 0
-    // Se o número de elementos for ímpar, retorna o valor central
     if (quan % 2 !== 0) {
         mediana = lista[meio]
     } 
-    // Se for par, calcula a média dos dois valores centrais
     else {
         mediana = (lista[meio - 1] + lista[meio]) / 2
     }
@@ -94,5 +91,6 @@ function medianaN(){
     menu()
 }
 function modaN(){
+    let moda = 0
     moda = 0
 }
