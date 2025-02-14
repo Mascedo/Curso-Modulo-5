@@ -14,19 +14,19 @@ if(isNaN(num1)||isNaN(num2)){
 }else{
     switch(op){       
     case '+':
-        adicionar()
+        console.log(`resultado:${num1}+${num2}=` + adicionar(num1,num2))
         break
     case '-':
-        subtrair()
+        console.log(`resultado:${num1}-${num2}=` + subtrair(num1,num2))
         break
     case '*':
-        multiplicar()
+        console.log(`resultado:${num1}*${num2}=` + multiplicar(num1,num2))
         break
     case '/':
-        dividir()
+        console.log(`resultado:${num1}/${num2}=` + dividir(num1,num2))
         break
     case '%':
-        porcetagem()
+        console.log(`${20}% de ${num1}=` + porcetagem(num1,num2))
         break
     default:
         console.log('simbolo de operação invalido!')
@@ -34,18 +34,18 @@ if(isNaN(num1)||isNaN(num2)){
     }
 }
 }
-function adicionar(){
-    console.log('o resultado de '+ num1 + op + num2 + ' é ' + (num1+num2))
+function adicionar(x,y){
+    return x+y
 }
-function subtrair(){
-    console.log('o resultado de '+ num1 + op + num2 + ' é ' + (num1-num2))
+function subtrair(x,y){
+    return x-y
 }
-function multiplicar(){
-    console.log('o resultado de '+ num1 + op + num2 + ' é ' + (num1*num2))
+function multiplicar(x,y){
+    return x*y
 }
-function dividir(){
-    console.log('o resultado de '+ num1 + op + num2 + ' é ' + (num1/num2))
+function dividir(x,y){
+    return x/y
 }
-function porcetagem(){
-    console.log(num2 + '% de '+ num1 + ' é ' + (num1*(num2/100)))
+function porcetagem(x,y){
+    return x*(y/100)
 }
